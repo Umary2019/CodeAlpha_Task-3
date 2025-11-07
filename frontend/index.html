@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargazal - Modern Project Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-logo-icon">🚀</span>
+                <h2>Bargazal ProjectFlow</h2>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <div id="auth-links" class="auth-links">
+                    <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+                </div>
+                <div id="user-links" class="user-links" style="display: none;">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="profile.html" class="nav-link" id="profile-link">Profile</a>
+                    <span id="user-name" class="user-name"></span>
+                    <button id="logout-btn" class="logout-btn">🚪</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Streamline Your Workflow with Modern Project Management</h1>
+            <p>Collaborate, track progress, and deliver projects faster with our intuitive platform designed for modern teams.</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary">
+                    <span>Start Free Trial</span>
+                    <span>🎯</span>
+                </a>
+                <a href="dashboard.html" class="btn btn-secondary">
+                    <span>View Demo</span>
+                    <span>👀</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Teams Love ProjectFlow</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📊 Visual Dashboards</h3>
+                    <p>Get real-time insights into your project progress with beautiful, interactive dashboards.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✅ Smart Task Management</h3>
+                    <p>Organize tasks with priorities, due dates, and assignees in an intuitive interface.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Seamless Collaboration</h3>
+                    <p>Work together with your team through comments, mentions, and real-time updates.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Progress Analytics</h3>
+                    <p>Track team performance and project metrics with detailed analytics and reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

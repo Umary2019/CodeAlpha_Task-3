@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - ProjectFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>📊 ProjectFlow</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <div id="auth-links" class="auth-links">
+                    <a href="login.html" class="nav-link">Login</a>
+                    <a href="register.html" class="nav-link">Register</a>
+                </div>
+                <div id="user-links" class="user-links" style="display: none;">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="profile.html" class="nav-link" id="profile-link">Profile</a>
+                    <span id="user-name" class="nav-link user-name"></span>
+                    <button id="logout-btn" class="nav-link logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>All Projects</h1>
+                <button class="btn btn-primary" id="create-project-btn">Create Project</button>
+            </div>
+
+            <div id="projects-container" class="projects-grid">
+                <!-- Projects will be loaded here -->
+            </div>
+
+            <div id="no-projects" class="login-prompt" style="display: none;">
+                <h3>No Projects Found</h3>
+                <p>Get started by creating your first project</p>
+                <button class="btn btn-primary" id="create-first-project-btn">Create Project</button>
+            </div>
+
+            <div id="login-prompt" class="login-prompt" style="display: none;">
+                <h3>Manage Your Projects</h3>
+                <p>Login to view and manage your projects</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <a href="register.html" class="btn btn-secondary">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Project Modal -->
+    <div id="create-project-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Project</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="create-project-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="project-name">Project Name *</label>
+                        <input type="text" id="project-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-description">Description</label>
+                        <textarea id="project-description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-status">Status</label>
+                        <select id="project-status" name="status">
+                            <option value="planning">Planning</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-start-date">Start Date</label>
+                        <input type="date" id="project-start-date" name="startDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="project-end-date">End Date</label>
+                        <input type="date" id="project-end-date" name="endDate">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="projectsManager.hideModals()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Create Project</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

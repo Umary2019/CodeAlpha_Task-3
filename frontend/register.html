@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ProjectFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-logo-icon">🚀</span>
+                <h2>Bargazal ProjectFlow</h2>
+            </div>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <div id="auth-links" class="auth-links">
+                    <a href="login.html" class="nav-link">Login</a>
+                    <a href="register.html" class="nav-link active">Register</a>
+                </div>
+                <div id="user-links" class="user-links" style="display: none;">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="profile.html" class="nav-link" id="profile-link">Profile</a>
+                    <span id="user-name" class="user-name"></span>
+                    <button id="logout-btn" class="logout-btn">🚪</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Get Started</h2>
+                <p>Create your ProjectFlow account</p>
+                
+                <form id="register-form" class="auth-form">
+                    <div id="register-message"></div>
+                    
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" name="email" required placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required placeholder="Create a password">
+                        <small>Must be at least 6 characters long</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-role">Role</label>
+                        <select id="register-role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="project_manager">Project Manager</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="team_lead">Team Lead</option>
+                            <option value="member">Team Member</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="register-btn" class="btn btn-primary btn-block">
+                        <span>Create Account</span>
+                        <span>🚀</span>
+                    </button>
+                    
+                    <div class="auth-links">
+                        <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="auth-decoration"></div>
+    </section>
+
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
